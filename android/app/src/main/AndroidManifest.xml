@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="projeto1"
+        android:label="lydband"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
