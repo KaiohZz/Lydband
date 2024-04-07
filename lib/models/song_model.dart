@@ -32,7 +32,7 @@ class SongModel {
       SongModel(
         title: 'Sharks', 
         singer: 'Imagine Dragons', 
-        imagePath: 'assets/img/sharks.png'
+        imagePath: 'assets/img/godzilla.jpg'
       )
     );
 

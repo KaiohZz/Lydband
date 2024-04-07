@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lydband/pages/home.dart';
 import 'package:lydband/pages/perfil.dart';
+import 'package:lydband/pages/sobre.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -33,6 +34,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           Home(),
           Perfil(),
+          Sobre(),
         ],
         onPageChanged: setPagina,
       ),
@@ -49,6 +51,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: "Perfil"
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: "Sobre"
           )
         ],
         onTap: (pagina) {
