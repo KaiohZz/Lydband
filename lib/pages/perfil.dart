@@ -38,27 +38,86 @@ class _PerfilState extends State<Perfil> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          const SizedBox(height: 50),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: Container(
+                  height: 320,
+                  width: 700,
+                  color: const Color(0xFF405758),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Container(
+                          width: 150,
+                          height: 150,
+                          decoration:
+                            BoxDecoration(shape: BoxShape.circle, boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.25),
+                              blurRadius: 4,
+                              spreadRadius: 0,
+                              offset: const Offset(0, 4),
+                            )
+                          ]),
+                          child: const CircleAvatar(backgroundImage: AssetImage("assets/img/Usuario.jpg")),
+                        ),
+                      ),
 
+                      const Padding(
+                        padding: EdgeInsets.only(left: 25),
+                        child: Text(
+                          "CloakingBot05",
+                          style: TextStyle(
+                              color: Color(0xFFBABABA),
+                              fontSize: 30,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.only(left: 20, top: 20),
+                        child: Text(
+                          "Biografia:",
+                          style: TextStyle(
+                            color: Color(0xff657C7D),
+
+                          ),
+                        ),
+                      ),
+
+                      const Padding(
+                        padding: EdgeInsets.only(left: 20, top: 5),
+                        child: Text(
+                          "Vikings usam capacetes de vikings",
+                          style: TextStyle(
+                            color: Color(0xFFBABABA)
+                          ),
+                        ),
+                      )
+                    ]
+                  ),
+                ),
+              )
+            ],
           ),
           const SizedBox(height: 40),
           redlistTitle(),
           const SizedBox(height: 10),
           redlistBody(),
           const SizedBox(height: 40),
+          /*
           avaliacoesTitle(),
           const SizedBox(height: 10),
           Container(
             padding: const EdgeInsets.all(20),
-            child: const Text(
-              "{EM DESENVOLVIMENTO :/}", 
-              style: TextStyle(
-                color: Color(0xffff5555),
-                fontSize: 20
-              ),
-            )
-            
-            /*
+
             child: ListView.separated(
               itemCount: aval.length,
               scrollDirection: Axis.vertical,
@@ -66,8 +125,8 @@ class _PerfilState extends State<Perfil> {
               itemBuilder: (Content, Index) {
 
               }, 
-            ),*/
-          )
+            ),
+          )*/
         ]
       ),
     );
@@ -106,13 +165,13 @@ class _PerfilState extends State<Perfil> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        child: Image.asset(songs[Index].imagePath),
                         width: 150,
+                        child: Image.asset(songs[Index].imagePath),
                       ),
                       
                       Text(
                         songs[Index].title,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color(0xFFE5E5E5),
                           fontSize: 14,
                           fontWeight: FontWeight.w500
@@ -121,7 +180,7 @@ class _PerfilState extends State<Perfil> {
 
                       Text(
                         songs[Index].singer,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color(0xFFE5E5E5),
                           fontSize: 14,
                           fontWeight: FontWeight.w500
